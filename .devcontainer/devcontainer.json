@@ -1,0 +1,16 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+	"name": "usdc-events-api",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"remoteUser": "node",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"tintinweb.vscode-inline-bookmarks",
+				"dbaeumer.vscode-eslint"
+			]
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "name": "usdc-events-api",
+  "version": "1.0.0",
+  "description": "usdc-events-api",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hardenerdev/usdc-events-api.git"
+  },
+  "author": "hardenerdev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hardenerdev/usdc-events-api/issues"
+  },
+  "homepage": "https://github.com/hardenerdev/usdc-events-api#readme"
+}
