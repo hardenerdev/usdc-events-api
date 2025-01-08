@@ -4,7 +4,7 @@
   "description": "usdc-events-api",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/app.js -e js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/hardenerdev/usdc-events-api/issues"
   },
-  "homepage": "https://github.com/hardenerdev/usdc-events-api#readme"
+  "homepage": "https://github.com/hardenerdev/usdc-events-api#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
