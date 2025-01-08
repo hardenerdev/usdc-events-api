@@ -18,3 +18,12 @@ flowchart TD
     usdc-events-api <-->|mongoose| mongodb
     user <-->|http| usdc-events-api
 ```
+
+## endpoints
+
+### chain
+
+| type | description | url | return value |
+|---|---|---|---|
+| GET | chain identifier | `/chain/id`| `{ chainId: "<chainId>" }` | |
+| GET | current block number | `/chain/blocknumber` | `{ blockNumber: "<blockNumber>" } ` |
