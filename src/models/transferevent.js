@@ -6,6 +6,22 @@ const transferEventSchema = new mongoose.Schema({
     trim: true,
     unique: true,
   },
+  from: {
+    type: String,
+    trim: true,
+  },
+  to: {
+    type: String,
+    trim: true,
+  },
+  tokens: {
+    type: String,
+    trim: true,
+  },
+  timestamp: {
+    type: String,
+    trim: true,
+  },
   address: {
     type: String,
     required: true,
@@ -65,6 +81,9 @@ const transferEventSchema = new mongoose.Schema({
 transferEventSchema.pre('save', function (next) {
   const event = this;
   event.id = `${event.blockHash},${event.transactionHash},${event.logIndex}`;
+  event.from = event.returnValues.from;
+  event.to = event.returnValues.to;
+  event.tokens = event.returnValues.tokens;
   next();
 });
 

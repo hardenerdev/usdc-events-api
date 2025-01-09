@@ -19,6 +19,7 @@ const subscription = contract.events.Transfer();
 
 subscription.on('data', async (event) => {
   try {
+    event.timestamp = (await web3.eth.getBlock(event.blockHash)).timestamp;
     await new TransferEvent(event).save();
     console.log(`+ event stored into mongodb`);
   } catch (e) {
