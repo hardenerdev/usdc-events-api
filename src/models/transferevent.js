@@ -15,7 +15,7 @@ const transferEventSchema = new mongoose.Schema({
     required: true,
   },
   blockNumber: {
-    type: Number,
+    type: String,
     required: true,
   },
   data: {
@@ -23,7 +23,7 @@ const transferEventSchema = new mongoose.Schema({
     required: true,
   },
   logIndex: {
-    type: Number,
+    type: String,
     required: true,
   },
   removed: {
@@ -39,7 +39,7 @@ const transferEventSchema = new mongoose.Schema({
     required: true,
   },
   transactionIndex: {
-    type: Number,
+    type: String,
     required: true,
   },
   returnValues: {
