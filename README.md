@@ -25,5 +25,21 @@ flowchart TD
 
 | type | description | url | return value |
 |---|---|---|---|
-| GET | chain identifier | `/chain/id`| `{ chainId: "<chainId>" }` | |
+| GET | chain identifier | `/chain/id` | `{ chainId: "<chainId>" }` | |
 | GET | current block number | `/chain/blocknumber` | `{ blockNumber: "<blockNumber>" } ` |
+
+### events/filter
+
+| type | description | url | return value |
+|---|---|---|---|
+| GET | event by ObjectId | `/events/transfer/:id` | `[{<event>},{<event>}]` |
+| GET | filter events | `/events/transfer/filter` | `[{<event>},{<event>}]` |
+
+#### filter options
+
+| field | description | example |
+|---|---|---|
+| from | transfer event from field | `<url>/events/transfer/filter?from=0x<address>` |
+| to | transfer event to field | `<url>/events/transfer/filter?to=0x<address>` |
+
+Filter options can be combined.
