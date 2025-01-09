@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const web3 = require('./services/web3');
 const chainRouter = require('./routers/chain');
+require('./database/mongoose');
 
 dotenv.config();
 

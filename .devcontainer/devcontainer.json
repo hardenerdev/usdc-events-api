@@ -6,6 +6,9 @@
 	},
 	"remoteUser": "node",
 	"postCreateCommand": "npm i .",
+	"runArgs": [
+		"--network=usdc-events-api_usdc-events-api-network"
+	],
 	"customizations": {
 		"vscode": {
 			"extensions": [
