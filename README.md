@@ -41,5 +41,9 @@ flowchart TD
 |---|---|---|
 | from | transfer event from field | `<url>/events/transfer/filter?from=0x<address>` |
 | to | transfer event to field | `<url>/events/transfer/filter?to=0x<address>` |
+| initDate | ISO8601 compatible initial time | `<url>/events/transfer/filter?initDate=YYYY-MM-DDT00:00:00.000Z` |
+| endDate | ISO8601 compatible final time | `<url>/events/transfer/filter?endDate=YYYY-MM-DDT00:00:00.000Z` |
+| minTokens | minimum amount of tokens | `<url>/events/transfer/filter?minTokens=<number>` |
+| maxTokens | maximum amount of tokens | `<url>/events/transfer/filter?maxTokens=<number>` |
 
 Filter options can be combined.
