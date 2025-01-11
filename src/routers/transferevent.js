@@ -1,17 +1,10 @@
 const express = require('express');
-const TransferEvent = require('../models/transferevent')
+const TransferEvent = require('../models/transferevent');
+const checkFilters = require('../middleware/transferevent');
 
 const transferEventRouter = new express.Router();
 
-transferEventRouter.get('/events/transfer/filter', async (req, res) => {
-  const filters = Object.keys(req.query);
-  const allowedFilters = ['from', 'to'];
-  const isValidFilter = filters.every((filter) => allowedFilters.includes(filter));
-
-  if (!isValidFilter) {
-    return res.status(500).send({ error: `Invalid filters.`})
-  }
-
+transferEventRouter.get('/events/transfer/filter', checkFilters, async (req, res) => {
   const results = await TransferEvent.find(req.query);
 
   if (!results) {
