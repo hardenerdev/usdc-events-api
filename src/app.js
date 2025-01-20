@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const chainRouter = require('./routers/chain');
 const transferEventRouter = require('./routers/transferevent');
 require('./services/ethers');
+require('./subscribers/transferevent');
 require('./database/mongoose');
 
 dotenv.config();
