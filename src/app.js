@@ -1,8 +1,8 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const web3 = require('./services/web3');
 const chainRouter = require('./routers/chain');
 const transferEventRouter = require('./routers/transferevent');
+require('./services/ethers');
 require('./database/mongoose');
 
 dotenv.config();

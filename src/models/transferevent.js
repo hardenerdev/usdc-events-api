@@ -66,10 +66,6 @@ const transferEventSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  signature: {
-    type: String,
-    required: true,
-  },
   raw: {
     type: mongoose.Schema.Types.Mixed,
     required: true,

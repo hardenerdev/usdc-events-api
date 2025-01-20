@@ -1,10 +1,10 @@
 const express = require('express');
-const web3 = require('../services/web3');
+const { provider } = require('../services/ethers');
 
 const chainRouter = new express.Router();
 
 chainRouter.get('/chain/id', async (req, res) => {
-  const chainId = await web3.eth.getChainId();
+  const chainId = await provider.getNetwork();
 
   if (!chainId) {
     return res.status(404).send();
@@ -14,7 +14,7 @@ chainRouter.get('/chain/id', async (req, res) => {
 });
 
 chainRouter.get('/chain/blocknumber', async (req, res) => {
-  const blockNumber = await web3.eth.getBlockNumber();
+  const blockNumber = await provider.getBlockNumber();
 
   if (!blockNumber) {
     return res.status(404).send();
