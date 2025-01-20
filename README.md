@@ -25,7 +25,7 @@ flowchart TD
 
 | type | description | url | return value |
 |---|---|---|---|
-| GET | chain identifier | `/chain/id` | `{ chainId: "<chainId>" }` | |
+| GET | chain identifier | `/chain/id` | `{ chainId: {name: "<chainName>", chainId: "<chainId>"}}` | |
 | GET | current block number | `/chain/blocknumber` | `{ blockNumber: "<blockNumber>" } ` |
 
 ### events/filter
