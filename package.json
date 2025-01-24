@@ -4,7 +4,7 @@
   "description": "usdc-events-api",
   "main": "src/app.js",
   "scripts": {
-    "dev": "nodemon src/app.js -e js",
+    "dev": "nodemon src/index.js -e js",
     "test": "jest"
   },
   "repository": {
