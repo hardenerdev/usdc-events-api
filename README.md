@@ -19,6 +19,13 @@ flowchart TD
     user <-->|http| usdc-events-api
 ```
 
+## env
+
+| field | description | example |
+|---|---|---|
+| WEB3_PROVIDER | wss provider | wss://ethereum-rpc.publicnode.com |
+| MONGOOSE_URL | mongoose connection url | mongodb://mongo:27017/<db> |
+
 ## endpoints
 
 ### chain
@@ -47,3 +54,27 @@ flowchart TD
 | maxTokens | maximum amount of tokens | `<url>/events/transfer/filter?maxTokens=<number>` |
 
 Filter options can be combined.
+
+## development
+
+1. Open project with vscode and [dev containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+2. Open terminal and type
+
+```bash
+npm run dev
+```
+
+## testing
+
+1. Open project with vscode and [dev containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+2. Set env test file and choose your own values
+
+```bash
+cp .env.sample .env.test
+```
+
+3. Open terminal and type
+
+```bash
+npm run test
+```
